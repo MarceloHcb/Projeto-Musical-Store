@@ -509,7 +509,7 @@ footer .logo{
     max-height: 50%;
 }
 .about p{
-    width: 80%;
+    width: 90%;
 }
 .footer-menu{
     display: flex;
@@ -580,11 +580,17 @@ footer .logo{
     }
     footer{
         grid-template-columns: repeat(3,1fr) ;
-        grid:"logo about faq" 
-            "logo contact social-media ";
+        grid:"logo about about" 
+            "contact faq social-media ";
         max-width: 100%;
-        font-size: 0.4rem;             
+        font-size: 0.4rem;
+        gap: 0;  
+        
     }
+    .contact, .faq, .social-media{
+        max-height: 100%;
+    }
+    
     .banner{
         display: none;
     }
@@ -694,7 +700,9 @@ footer .logo{
     header h1 {
         font-size: 1rem;
     }
-
+footer{
+    display: none;
+}
 #img-logo {
     width: 50px;
 }
