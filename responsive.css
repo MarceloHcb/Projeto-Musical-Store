@@ -6,14 +6,17 @@
     .menu{
         margin-top: 80px;
     }
-}
-
-@media (max-width:1000px) {
-    .market-area {
-        grid-template-columns: repeat(2, 1fr);
+    .mn{
+        font-size: 20px;
+        margin-bottom: 60px;
+    }
+} 
+@media (max-width:1080px) {
+    .mn{
+        font-size: 20px;
+        margin-bottom: 60px;
     }
 }
-
 @media (max-width:840px) {
     .top{
         grid:"logo  icons-menu"
@@ -24,7 +27,7 @@
          padding: 30px;  
          position: relative;      
 
-        /* flex-direction: column; */
+        
     }
     footer{
         display: none;
