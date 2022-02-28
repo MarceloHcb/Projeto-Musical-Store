@@ -214,7 +214,7 @@ const finalizarCompra = () => {
     seleciona('.cart-finalizar').addEventListener('click', () => {
         seleciona('aside').classList.remove('show')
         seleciona('aside').style.left = '100vw'
-        seleciona('header').style.display = 'flex'
+        seleciona('header').style.display = 'grid'
     })
 }
 
