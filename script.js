@@ -142,7 +142,11 @@ const abrirCarrinho = () => {
     seleciona('.menu-openner').addEventListener('click', () => {
         if (cart.length > 0) {
             seleciona('aside').classList.add('show')
+        }
+            if( seleciona('aside').style.left = '0'){
             seleciona('aside').style.left = '0'
+        }else{
+            seleciona('aside').style.left = '-60%'
         }
     })
 }
@@ -150,7 +154,7 @@ const abrirCarrinho = () => {
 const fecharCarrinho = () => {
     seleciona('.menu-closer').addEventListener('click', () => {
         seleciona('aside').style.left = '100vw'
-        seleciona('header').style.display = 'flex'
+        seleciona('header').style.display = 'grid'
     })
 }
 
