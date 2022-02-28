@@ -17,7 +17,7 @@
 @media (max-width:840px) {
     .top{
         grid:"logo  icons-menu"
-        "search search";       
+            "search search";       
          grid-template-columns: repeat(2,1fr);   
          justify-content: center;       
          align-items: center;
@@ -26,7 +26,8 @@
 
         /* flex-direction: column; */
     }
-    .menu{display: none;
+    .menu{
+        display: none;
     }
     footer{
         grid-template-columns: repeat(3,1fr) ;
@@ -78,10 +79,7 @@
     }
     aside.show {
         width:auto;
-    }
-    .cart-area {
-        width:100vw;
-    }
+    }    
 
     .menu-closer {
         display:block;
@@ -145,18 +143,8 @@
         font-size: 1.5rem;
     }
     aside{
-        width: 100vh;
-        left: 1;
-    }
-    aside .show{           
-        left: 1;               
-    }
-  
-   .cart-area{
-       width:100vh;
-       height: 100vh;
-       left: 1200vh;
-   }
+        width: 100vh;        
+    }     
    .contact{
        max-width: 80%;
    }
