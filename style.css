@@ -1,0 +1,701 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700;800&display=swap');
+html{
+    font-size: 1.6rem;
+    background-color: azure;
+}
+.top{
+    display: grid;
+    background-color: black;
+    color: azure;    
+    grid:'logo logo search icons-menu'10vh
+         'menu menu menu menu'5vh; 
+         grid-template-columns: repeat(4,1fr);   
+         justify-content: center;       
+         align-items: center;
+         padding: 30px;  
+         position: relative;      
+}    
+
+.navigation ul li:hover{
+    color:  #38b6ff;      
+}
+.logo{
+    grid-area: logo;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 50%;   
+}
+.logo img{
+    width: 15vh;
+}
+hr{
+    position: absolute;
+    border-color: #38b6ff;
+    top: 60%;
+    width: 100%;
+    opacity: 0.2;   
+}
+.search{
+    grid-area:search;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 50px;       
+}
+.search input{
+    width: 50vh;
+    height: 5vh;
+    border-radius: 20px;
+    padding: 20px;
+    color: #38b6ff;
+    font-size: 20px;
+    font-weight: 500;     
+    border-color: #38b6ff;
+}
+.position{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search a{
+    position: absolute;
+    right: 20px;
+    color: #38b6ff;
+}
+
+.icons-menu{
+    grid-area: icons-menu; 
+    display: flex; 
+   
+}
+.icons-menu i{
+  padding: 20px;   
+}
+.icons-menu i:hover{
+    color: #38b6ff;
+}
+
+.menu {
+    margin-top: 20px;
+    grid-area: menu;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+.navigation ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 20px;
+    
+}
+.navigation ul li{
+    cursor: pointer;
+    position:relative;
+}
+.mn li  ul{
+    position:absolute;
+    top:25px;
+    left:0;     
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+.menu li:hover ul, .menu li.over ul{display:block;}
+.mn li ul li{
+    padding: 10px;  
+    text-align: center;  
+}
+.mn li ul li:hover{
+    color: #5271ff;
+    background-color: black;
+    border-radius: 30px;    
+}
+.center{
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    background-size: cover;
+    height: 150vh;
+}
+.center h2{
+    text-align: center;
+    margin: 50px 0;
+}
+.banner{  
+   position: relative;
+   width: 100%;
+   max-width: 70%;
+   height: 20vw; 
+   max-height: 40vh;  
+}
+.banner img{
+    position: absolute;   
+    width: 100%;
+    height: 100%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 8000ms;
+}
+.banner img.selected{
+    border: 1px solid #38b6ff;  
+    opacity: 1;
+}
+.menu-openner{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.menu-openner span{
+  position: absolute;
+  right: 77%;    
+}
+
+.music-item-img img{
+    width: 350px;
+    height: 300px;    
+
+}
+.center-market{
+    display: none;
+}
+.menu-closer {
+    width:32px;
+    height:32px;
+    display:none;
+    font-size: 30px;
+}
+aside {
+    background-color:black;
+    width:0vw;    
+    transition:all ease .2s;
+    overflow-x:hidden;
+    text-align: center;
+}
+aside.show {
+    width:40% ;
+    justify-self: center;
+    height: 100vh;
+    position: absolute;
+    top: 20%;
+    margin-left: 60%;      
+    align-self: flex-start;
+    z-index: 11;
+}
+.cart-area {
+    margin-top: 30px; 
+    padding:20px;    
+    color: white;
+}
+.cart-area h1 {
+    display: relative;
+}
+.market-area {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);    
+}
+.music-item {
+    text-align: center;
+    max-width:850px;    
+    margin:0 auto 50px auto;
+}
+.music-item a {
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    text-decoration: none;
+}
+.music-item-img {
+    width:200px;
+    height:200px;
+    background-color:#EEE;   
+    box-shadow:0px 10px 50px rgba(0, 0, 0, 0.2);
+}
+.music-item-img img {
+    width:100%;
+    height:100%;
+}
+.music-item-add {
+    width:50px;
+    height:50px;
+    line-height:50px;
+    border-radius:25px;
+    background-color:#38b6ff;  
+    text-align:center;
+    color:#FFF;
+    font-size:22px;
+    cursor:pointer;
+    margin-top:-25px;
+    transition:all ease .2s;
+}
+.music-item a:hover .music-item-add {
+    background-color:#5271ff;
+}
+.music-item-price {
+    font-size:15px;
+    color:#333;
+    margin-top:5px;
+}
+.music-item-name {
+    font-size:20px;
+    font-weight: bold;
+    color:#000;
+    margin-top:5px;
+}
+.music-item-desc {
+    font-size:13px;
+    color:#555;
+    margin-top:10px;
+    margin-left:40px;
+    max-width: 85%;
+}
+.instrumentsWindowArea {
+    position:fixed;
+    left:0;
+    top:0;
+    bottom:0;
+    right:0;
+    background-color:rgba(255, 255, 255, 0.5);
+    display:none;
+    transition: all ease .5s;
+    justify-content: center;
+    align-items: center;
+    overflow-y:auto;
+    z-index: 10;
+}
+.instrumentsWindowBody {
+    width:900px;
+    background-color:#FFF;
+    border-radius:10px;
+    box-shadow:0px 0px 15px #999;
+    display:flex;
+    margin:20px 0px;
+}
+.profInstrument {
+    flex:1;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.profInstrument-back {
+    position:absolute;
+    width:30px;
+    height:30px;
+    background-color:#000;
+}
+.profInstrument img {
+    height:200px;
+    width:auto;
+}
+.instrumentsInfo {       
+    padding-bottom:50px;
+}
+.instrumentsInfo h1 {
+    margin-top:50px;
+}
+.instrumentsInfo  .instrumentsInfo-desc {
+    font-size:15px;
+    color:#999;
+    margin-top:10px;    
+}
+.instrumentsInfo-sector {
+    color:#CCC;
+    text-transform: uppercase;
+    font-size:14px;
+    margin-top:30px;
+    margin-bottom:10px;
+}
+.instrumentsInfo-styles {
+    display:inline-flex;
+    border-radius:10px;
+    overflow:hidden;
+}
+.instrumentsInfo-style {
+    padding:10px 15px;
+    color:#000;
+    background-color:#EEE;
+    font-size:13px;
+    font-weight: bold;
+    cursor:pointer;
+}
+.instrumentsInfo-style:hover{
+    background-color:rgb(204, 204, 204);
+}
+.instrumentsInfo-style.selected{
+    background-color:#5271ff;
+    color:#FFF;
+}
+.instrumentsInfo-style.selected span{
+    color:#D6D6D6;
+}
+
+.instrumentsInfo-style span{
+    font-size:12px;
+    color:#999;
+    font-weight: normal;
+}
+
+.instrumentsInfo-price {
+    display:flex;
+    align-items:center;
+}
+
+.instrumentsInfo-actualPrice {
+    font-size:28px;
+    margin-right:30px;
+}
+
+.instrumentsInfo-qtarea {
+    display:inline-flex;
+    background-color:#EEE;
+    border-radius:10px;
+    height:30px;
+}
+
+.instrumentsInfo-qtarea button {
+    border:0;
+    background-color:transparent;
+    font-size:17px;
+    outline:0;
+    cursor:pointer;
+    padding:0px 10px;
+    color:#333;
+}
+
+.instrumentsInfo-qt {
+    line-height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0px 5px;
+    color:#000;
+}
+
+.instrumentsInfo-addButton {
+    margin-top:30px;
+    padding:20px 30px;
+    border-radius:20px;
+    background-color:#48d05f;
+    color:#FFF;
+    display:inline-block;
+    cursor:pointer;
+    margin-right:30px;
+}
+
+.instrumentsInfo-addButton:hover {
+    background-color:#32a345;
+}
+
+.instrumentsInfo-cancelButton {
+    display:inline-block;
+    cursor:pointer;
+}
+
+.instrumentsInfo-cancelMobileButton {
+    display:none;
+    height:40px;
+    text-align:center;
+    line-height: 40px;
+    margin-bottom:30px;
+}
+
+.cart {
+    margin-bottom:20px;
+}
+.cart-item {
+    display:flex;
+    align-items:center;
+    margin:10px 0;
+}
+.cart-item img {
+    width:40px;
+    height:40px;
+    margin-right:20px;
+}
+.cart-item-nome {
+    flex:1;
+}
+.cart-item-qtarea {
+    display:inline-flex;
+    background-color:#EEE;
+    border-radius:10px;
+    height:30px;
+}
+.cart-item-qtarea button {
+    border:0;
+    background-color:transparent;
+    font-size:17px;
+    outline:0;
+    cursor:pointer;
+    padding:0px 10px;
+    color:#333;
+}
+.cart-item-qt {
+    line-height: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0px 5px;
+    color:#000;
+}
+.cart-totalitem {
+    padding:15px 0;
+    border-top:1px solid #38b6ff; 
+    color:#315970;
+    display:flex;
+    justify-content: space-between;
+    font-size:15px;
+}
+.cart-totalitem span:first-child {
+    font-weight: bold;    
+}
+.cart-totalitem.big {
+    font-size:20px;
+    color:#000;
+    font-weight: bold;
+    color: white;
+}
+.cart-finalizar {
+    padding:20px 30px;
+    border-radius:20px;
+    background-color:#5271ff;   
+    color:#FFF;
+    cursor:pointer;
+    text-align:center;
+    margin-top:20px;
+    border:2px solid #38b6ff;
+    transition: all ease .2s;
+}
+.cart-finalizar:hover {
+    background-color:#38b6ff;
+}
+.footer-container{
+    background-color: #000;
+    display: flex;
+    justify-content: center;    
+    
+}
+footer{
+    display: grid;
+    grid-template-columns: repeat(5,1fr) ;
+    grid:"logo about faq contact social-media";
+    background-color: #000;
+    color: white;
+    font-size: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    max-width: 90%;
+}
+footer ul li{
+    margin: 3px;
+}
+footer .logo{
+    grid-area: logo;
+    margin: 20px;   
+}
+.about{
+    grid-area: about;   
+    text-align: justify; 
+    height: 100%;
+    max-height: 50%;
+}
+.about p{
+    width: 80%;
+}
+.footer-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.faq{
+    grid-area: faq;
+    height: 100%;
+    max-height: 50%;
+}
+.contact{
+    grid-area: contact;
+    height: 100%;
+    max-height: 50%;
+}
+.social-media{
+    grid-area: social-media;
+    height: 100%;
+    max-height: 50%;   
+}
+.social-media a i{
+    font-size: 18px;
+    color: #38b6ff;
+    padding: 10px;    
+}    
+.social-media a i:hover{
+    color: #5271ff;
+}  
+
+
+
+
+
+
+
+
+@media (max-width:1200px) {
+    .top{
+        
+        padding: 5px;
+    }
+    .menu{
+        margin-top: 80px;
+    }
+}
+
+@media (max-width:1000px) {
+    .market-area {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:840px) {
+    .top{
+        grid:"logo  icons-menu"
+        "search search";       
+         grid-template-columns: repeat(2,1fr);   
+         justify-content: center;       
+         align-items: center;
+         padding: 30px;  
+         position: relative;      
+
+        /* flex-direction: column; */
+    }
+    .menu{display: none;
+    }
+    footer{
+        grid-template-columns: repeat(3,1fr) ;
+        grid:"logo about faq" 
+            "logo contact social-media ";
+        max-width: 100%;
+        font-size: 0.4rem;             
+    }
+    .banner{
+        display: none;
+    }
+    .footer{        
+        position: fixed;
+        bottom: 0;
+
+        
+    }
+    .footer-menu{
+        display: none;
+    }
+
+    body {
+        flex-direction: column;
+    }
+    .market-area {
+        display:block;
+    }
+    .music-item {
+        max-width:100%;
+    }
+    header {
+        display:flex;
+    }
+    
+    aside {
+        width:auto;
+        position:fixed;
+        left:100vw;
+        right:0;
+        top:0;
+        bottom:0;
+        transition: all ease .2s;
+    }
+    aside.show {
+        width:auto;
+    }
+    .cart-area {
+        width:100vw;
+    }
+
+    .menu-closer {
+        display:block;
+    }
+
+    .instrumentsWindowArea {
+        justify-content:flex-start;
+        align-items: flex-start;
+    }
+
+    .instrumentsWindowBody {
+        width:100vw;
+        display:block;
+        padding:20px;
+        border-radius:0;
+        box-shadow:none;
+        margin:0;
+    }
+
+    .profInstrument img {
+        width: 75%;
+        height: auto;
+    }
+
+    .instrumentsInfo h1 {
+        margin-top:20px;
+    }
+
+    .pizzaInfo--qtarea {
+        height:60px;
+    }
+    
+    .instrumentsInfo-qtarea button {
+        font-size:25px;
+        padding:0px 25px;
+    }
+
+    .instrumentsInfo-qt {
+     
+        font-size:20px;
+    }
+
+    .instrumentsInfo-addButton {
+        font-size:20px;
+        display:block;
+        text-align:center;
+        margin:30px auto;
+    }
+
+    .instrumentsInfo-cancelButton {
+        display:none;
+    }
+
+    .instrumentsInfo-cancelMobileButton {
+        display:block;
+    }
+}
+
+@media (max-width:450px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+   
+}
+@media (max-width:380px) {
+    header h1 {
+        font-size: 1rem;
+    }
+
+#img-logo {
+    width: 50px;
+}
+}
