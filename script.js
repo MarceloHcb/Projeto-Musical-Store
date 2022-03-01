@@ -193,7 +193,7 @@ const atualizarCarrinho = () => {
                     cart.splice(i, 1)
                 }
 
-                (cart.length < 1) ? seleciona('header').style.display = 'flex' : ''
+                (cart.length < 1) ? seleciona('header').style.display = 'grid' : ''
                 atualizarCarrinho()
             })
 
